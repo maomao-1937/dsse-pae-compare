@@ -1,0 +1,10 @@
+[
+  {"name":"equivalent base64", "args":["dsse_pae_compare.py","examples/reference.json","examples/alternate-base64.json"], "exit":0,
+   "report":{"status":"same","type_same":true,"payload_same":true,"legacy_collision":false,"type_utf8_bytes":[4,4]}},
+  {"name":"legacy model collision", "args":["dsse_pae_compare.py","examples/reference.json","examples/legacy-collision.json"], "exit":1,
+   "report":{"status":"different","type_same":false,"payload_same":true,"legacy_collision":true,"type_utf8_bytes":[4,8]}},
+  {"name":"changed body", "args":["dsse_pae_compare.py","examples/reference.json","examples/changed-body.json"], "exit":1,
+   "report":{"status":"different","type_same":true,"payload_same":false,"legacy_collision":false,"type_utf8_bytes":[4,4]}},
+  {"name":"invalid pad bits", "args":["dsse_pae_compare.py","examples/reference.json","examples/invalid.json"], "exit":2,
+   "report":{"status":"invalid"}}
+]
